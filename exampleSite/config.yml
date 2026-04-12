@@ -4,11 +4,6 @@ theme: "terminalcv"
 title: "terminalcv"
 
 params:
-  colors:
-    itemColor: "#ff00d1"
-    textColor: "#0098df"
-    generalText: "#349e23"
-  
   version: "2.0.0"
   description: "My terminal cv"
   blog: true
