@@ -105,7 +105,7 @@ you can just copy the existing example file and change it to your liking.
 
 ### Terminal defaults
 
-The default settings for the terminal interface can be changed through [/assets/style.css](/assets/style.css).
+The default settings for the terminal interface can be changed through [/static/style.css](/static/style.css).
 
 This includes:
 + Background Color
