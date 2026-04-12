@@ -91,22 +91,23 @@ jQuery(document).ready(function($) {
                commandsHelp();
 
     var whois = [
-    {{ with .Site.Params.whois.details }} 
-        '[[b;grey;]Name:]\t\t\t{{ .name }}\n' + 
-        '[[b;grey;]Profession:]\t\t{{ .profession }}\n' +
-        '[[b;grey;]Location:]\t\t{{ .location }}\n' +
-        {{ if .email }}
-        '[[b;grey;]Email:]\t\t\t{{ .email }}\n' +
+        {{ with .Site.Params.whois.details }} 
+            '[[b;{{ .leftColor | default "white" }};]Name:]          [[b;{{ .rightColor | default "grey" }};]{{ .name }}\n]' + 
+            '[[b;{{ .leftColor | default "white" }};]Profession:]\t[[b;{{ .rightColor | default "grey" }};]{{ .profession }}\n]' +
+            '[[b;{{ .leftColor | default "white" }};]Location:]\t\t[[b;{{ .rightColor | default "grey" }};]{{ .location }}\n]' +
+            
+            {{ if .email }}
+            '[[b;{{ .leftColor | default "white" }};]Email:]\t\t\t{{ .email }}\n' +
+            {{ end }}
+            {{ if .homelink }}
+            '[[b;{{ .leftColor | default "white" }};]Homepage:]      {{ .homelink }}\n' +
+            {{ end }}
+            {{ if .description }}
+            '[[b;{{ .descriptionColor | default "white" }};]{{ .description }}]' +
+            {{ end }}
+            '\r',
         {{ end }}
-        {{ if .homelink }}
-        '[[b;grey;]Homepage:]\t\t{{ .homelink }}\n' +
-        {{ end }}
-        {{ if .description }}
-        '{{ .description }}' +
-        {{ end }}
-        '\r',
-    {{ end }}
-    ];
+    ]; 
 
     function social() { 
         var hideName = false;
@@ -259,7 +260,7 @@ jQuery(document).ready(function($) {
             {{ if .description }}
             '{{ .description }}\n' +
             {{ end }}
-            '\r',
+            "\r",
         {{ end }}
     {{ end }}
     ];
@@ -581,7 +582,7 @@ jQuery(document).ready(function($) {
           greetings: "[[b;{{ .Site.Params.greetingColor | default "white" }};]{{ .Site.Params.greeting }}]",
         {{ end }}
 
-        prompt: '{{ with .Site.Params.prompt }}{{ with .core }}[[;{{ .beforeColor | default "grey" }};]{{ .before }}][[;{{ .color | default "grey" }};]{{ .text }}][[;{{ .afterColor | default "gey" }};]{{ .after }}]{{ end }}{{ with .separator }}[[;{{ .separatorColor | default "grey" }};]{{ .text }}]{{ end }}{{ with .path }}[[;{{ .beforeColor | default "grey" }};]{{ .before }}][[;{{ .color | default "grey" }};]{{ .text | default ":~$" }}][[;{{ .afterColor | default "grey" }};]{{ .after }}]{{ end }}{{ with .extra }}[[;{{ .color | default "grey" }};]{{ .text }}]{{ end }}{{ end }}',
+        prompt: '{{ with .Site.Params.prompt }}{{ with .core }}[[;{{ .beforeColor | default "grey" }};]{{ .before }}][[;{{ .color | default "grey" }};]{{ .text }}][[;{{ .afterColor | default "grey" }};]{{ .after }}]{{ end }}{{ with .separator }}[[;{{ .separatorColor | default "grey" }};]{{ .text }}]{{ end }}{{ with .path }}[[;{{ .beforeColor | default "grey" }};]{{ .before }}][[;{{ .color | default "grey" }};]{{ .text | default ":~$" }}][[;{{ .afterColor | default "grey" }};]{{ .after }}]{{ end }}{{ with .extra }}[[;{{ .color | default "grey" }};]{{ .text }}]{{ end }}{{ end }}',
 
         keydown: function(e, term) {
             if (animation) {

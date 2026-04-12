@@ -4,6 +4,11 @@ theme: "terminalcv"
 title: "terminalcv"
 
 params:
+  colors:
+    itemColor: "#ff00d1"
+    textColor: "#0098df"
+    generalText: "#349e23"
+  
   version: "2.0.0"
   description: "My terminal cv"
   blog: true
@@ -92,6 +97,9 @@ params:
     # settings:
     #   useLess: true
     details:
+      leftColor: "grey"
+      rightColor: "grey"
+      descriptionColor: "grey"
       name: "John Doe"
       profession: "Unknown"
       location: "Somewhere"
@@ -101,9 +109,9 @@ params:
         Here you can write something catchy about yourself
 
   social:
-    # settings:
-    #   useLess: true
-    #   hideName: true
+    #settings:
+    #  useLess: true
+    #  hideName: true
     details:
       - name: "github"
         url: "https://github.com"
@@ -155,7 +163,7 @@ params:
 
   skills:
     settings:
-      useLess: true
+      useLess: true #set to false for no ~~~~(END)
     details:
       - name: Skill 1
         percentage: 90
@@ -250,6 +258,7 @@ params:
     #   useLess: true
     details:
       - certName: Example Cert
+        #color: "blue"
         company: Example Certifying Company
         date: Date of Completion
         badge: https://www.link.to.badge

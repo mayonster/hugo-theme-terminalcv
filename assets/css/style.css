@@ -1,0 +1,7 @@
+.terminal {
+    --color: green;
+    --background: white;
+    --link-color: darkblue;
+    --animation: terminal-underline;
+    --line-thickness: 3;
+}
