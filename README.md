@@ -99,15 +99,15 @@ git submodule add https://github.com/coolapso/hugo-theme-terminalcv.git themes/t
 
 # How to configure
 
-The majority of the content and configuration is done through the [config.yml](config.yml).
+All the content and configuration is done through the [config.yml](config.yml).
 
 you can just copy the existing example file and change it to your liking.
 
-### Terminal defaults
+### Custom CSS
 
-The default settings for the terminal interface can be changed through [/static/style.css](/static/style.css).
+To change the default settings for the terminal interface, set the `customCSS` paramter in [config.yml](config.yml) and edit [/static/style.css](/static/style.css) to fit your style.
 
-This includes:
+You can change:
 + Background Color
 + Default Text Color
 + URL Color

@@ -17,8 +17,9 @@
     <script src="https://unpkg.com/jquery.terminal/js/autocomplete_menu.js"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.42.0/css/jquery.terminal.min.css" rel="stylesheet"/>
-
-    <link rel="stylesheet" href={{ absURL "/style.css" }}>
+    {{ if .Site.Params.customCSS }}
+        <link rel="stylesheet" href={{ absURL "style.css" }}>
+    {{ end }}
 
     <style>
         body {
@@ -26,11 +27,6 @@
             font-size: 18px;
         }
     </style>
-
-
- 
-
-
 {{ if .Site.Params.analytics.code }}
     {{ .Site.Params.analytics.code }}
 {{ end }}

@@ -35,6 +35,7 @@ params:
   # promptSimbolsColor: grey
   # startxLocation: https://example.com
   # useLess: true
+  #customCSS: true
   listLS: true
   #exitLocation: "about:blank"
   exitMessage: "[Session completed, the browserwindow can be safely closed]"
@@ -92,9 +93,9 @@ params:
     # settings:
     #   useLess: true
     details:
-      leftColor: "grey"
-      rightColor: "grey"
-      descriptionColor: "grey"
+      leftColor: "white"
+      rightColor: "white"
+      descriptionColor: "white"
       name: "John Doe"
       profession: "Unknown"
       location: "Somewhere"
@@ -158,7 +159,7 @@ params:
 
   skills:
     settings:
-      useLess: true #set to false for no ~~~~(END)
+      useLess: true
     details:
       - name: Skill 1
         percentage: 90
